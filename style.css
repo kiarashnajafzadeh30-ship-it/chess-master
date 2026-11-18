@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+}
+
+body {
+  background: #1e1e2f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.game-container {
+  background: #2b2b3c;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  text-align: center;
+  max-width: 600px; /* افزایش عرض کادر */
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #f1c40f;
+  font-size: 28px;
+}
+
+.mode-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  background: #1e1e2f;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.mode-selector select {
+  padding: 8px;
+  border-radius: 6px;
+  background: #2b2b3c;
+  color: white;
+  border: 1px solid #555;
+  outline: none;
+  cursor: pointer;
+}
+
+/* استایل بخش آنلاین */
+#online-section {
+  background: #1e1e2f;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+}
+.online-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.join-group {
+  display: flex;
+  gap: 5px;
+}
+.join-group input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #2b2b3c;
+  color: white;
+  text-align: center;
+}
+#roomCodeDisplay {
+  margin-top: 10px;
+  color: #f1c40f;
+  font-weight: bold;
+}
+
+.player-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.player-inputs div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.player-inputs label {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #bbb;
+}
+
+.player-inputs input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1e1e2f;
+  color: #fff;
+  outline: none;
+}
+
+.player-inputs input:focus {
+  border-color: #f1c40f;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4e54c8;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #3b40a0;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2ecc71;
+  height: 24px;
+}
+
+.board-b72b1 {
+  border: 4px solid #44445e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* افکت برجسته شدن مهره‌ها */
+#myBoard img {
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: grab;
+}
+
+#myBoard img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.6));
+  z-index: 10;
+  position: relative;
+}
+
+#myBoard img:active {
+  cursor: grabbing;
+  transform: scale(1.2);
+}
